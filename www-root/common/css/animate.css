@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush);
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
+#fade-text {cursive;font-size:4em;} 
+
+.slider {overflow-y:hidden;max-height:500px;transition-duration:2s;}
+.closed {max-height:0px;}
+ 
+.stroke {stroke: #FFF; stroke-width: 1px; stroke-dasharray: 0 250; stroke-opacity: 1; fill: none; -webkit-animation: stroke_offset 5s; animation: stroke_offset 5s; -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94); animation-timing-function: cubic-bezier(.25, .46, .45, .94) } 
+
+@-webkit-keyframes stroke_offset { 
+	100%, 25% {stroke-dasharray: 0 250; stroke-opacity: 1 } 
+	50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75 } 
+	55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0 } 
+} 
+
+@keyframes stroke_offset { 
+	100% {stroke-dasharray: 0 250; stroke-opacity: 1 } 
+	50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75 } 
+	55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0 } 
+} 
+
+.fill { fill: #FFF; fill-opacity: 1; -webkit-animation: fill_offset 5s; animation: fill_offset 5s; -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94); animation-timing-function: cubic-bezier(.25, .46, .45, .94) } 
+
+@-webkit-keyframes fill_offset { 
+	100%, 25%, 35%, 90% { fill-opacity: 0 } 
+	50%, 70% { fill-opacity: 1 } 
+}
+
+@keyframes fill_offset {
+	0%{ fill-opacity: 0 } 
+	50%{ fill-opacity: 0 } 
+	100% { fill-opacity: 1 }
+}

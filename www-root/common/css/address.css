@@ -1,0 +1,131 @@
+
+textarea::placeholder {font-family:'Nanum Gothic'}
+.scroll-item > .scroll-sub-box > .address {
+	font-family: 'Nanum Gothic';
+	font-size: small;
+
+}
+.addressList{
+	width: 100%;
+	height: 100%;
+	border-collapse: separate;
+ 	border-spacing: 15px;
+ }
+.addressList th{
+	width: 30%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.addressList td{
+	margin-bottom: 10px;
+}
+
+.addressList td input[type="text"], .addressList td textarea {
+	border: 1px solid #e4e4e4;
+	padding-left: 10px;
+}
+.addressList td input[type="button"] {
+	border:0px;
+	background-color: rgba(141,111,75,0.5);
+	color:white;
+	border-radius: 5px;
+	width: 20%;
+	height: 50px;
+}
+.addressList input[type="text"]{
+	width: 40%;
+	height: 50px;
+}
+.addressList textarea{
+	width: 60%;
+	height: 70px;
+}
+
+.addressList input.small-input {
+	width:25%;
+	height:50px;
+	border:1px solid #e3e3e3;
+	padding-left:10px;
+}
+
+#userinfo{
+	text-align:right;
+	margin-right: 20px;
+}
+.scroll-item > .scroll-sub-box > .underline {
+}
+
+.scroll-sub-box{
+	width:100%;
+	max-width: 950px;
+	height: auto !important;
+	margin: auto;
+	top: 50%;
+	position: absolute;top: 50%; transform: translateY(--50%);
+}
+
+/*
+* 반응형(모바일) 
+*/
+@media screen and (max-width: 768px) { 
+
+.addressList{
+	border-collapse: separate;
+ 	border-spacing: 3px;
+ }
+.addressList th{
+	width: 20%;
+	text-align: center;
+}
+.addressList td{
+	margin-bottom: 10px;
+}
+
+.addressList td input[type="text"], .addressList td textarea {
+	border: 1px solid #e4e4e4;
+	padding-left: 10px;
+}
+.addressList td input[type="button"] {
+	border:0px;
+	background-color: rgba(141,111,75,0.5);
+	color:white;
+	border-radius: 5px;
+	width: 20%;
+	height: 35px;
+}
+.addressList #sample6_postcode,.addressList .email{
+	width: 30%;
+}
+.addressList input[type="text"]{
+	width: 90%;
+	height: 35px;
+}
+.addressList textarea{
+	width: 90%;
+	height: 35px;
+}
+
+.addressList input.small-input {
+	width:28.9%;
+	height:35px;
+	border:1px solid #e3e3e3;
+	padding-left:10px;
+}
+#userinfo{
+	text-align:right;
+	margin-right: 20px;
+}
+.scroll-item > .scroll-sub-box > .underline {
+}
+
+.scroll-sub-box{
+	width:100%;
+	max-width: 950px;
+	height: auto !important;
+	margin: auto;
+	top: 50%;
+	position: absolute;top: 50%; transform: translateY(--50%);
+}
+
+
+}

@@ -10,8 +10,9 @@ include_once './common/top_menu.php';
 			</div>
 		</div>
 		<div class="scroll-item">
-			<div class="scroll-sub-box content-div">
-				<div class="product-subject c_black">배송지 정보 입력</div>
+			<div class="scroll-sub-box">
+<!--			<div class="scroll-sub-box content-div">	-->
+<!--				<div class="product-subject c_black">배송지 정보 입력</div>	-->
 				<span class="underline"></span>
 				<div class="address">
 					<form method="post"> <!--action 유/무 결정해야 함 -->

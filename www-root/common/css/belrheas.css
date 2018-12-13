@@ -289,7 +289,7 @@ footer {margin-top:50px;margin-bottom:150px;border-top:2px solid #e9e9e9;padding
 		overflow: hidden;
 	}
 
-	.logo {width:50px;height:30px;position:absolute;left:50%;top:0px;margin:10px 0px;cursor:pointer;transform:translateX(-50%);}
+	.logo {width:100px;height:80px;position:absolute;left:50%;top:0px;margin:10px 0px;cursor:pointer;transform:translateX(-50%);}
 	nav > ul {display:none;}
 
 	.order-tab > button {width:40%;max-width:200px;height:40px;border:0px;font-size:12pt;border-radius:5px;}

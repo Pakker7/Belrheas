@@ -1,4 +1,6 @@
-
+/*
+* PC버전 
+*/
 textarea::placeholder {font-family:'Nanum Gothic'}
 .scroll-item > .scroll-sub-box > .address {
 	font-family: 'Nanum Gothic';
@@ -115,21 +117,47 @@ textarea::placeholder {font-family:'Nanum Gothic'}
 	text-align:right;
 	margin-right: 20px;
 }
-.scroll-item > .scroll-sub-box > .underline {
-}
-
 .scroll-sub-box{
 	width:100%;
 	max-width: 950px;
 	height: auto !important;
 	margin: auto;
 	top: 50%;
-	position: absolute;top: 50%; transform: translateY(--50%);
+	position: absolute;top: 50%; transform: translateY(-50%);
+	}
+
+	/*모바일용 로고,헤더 수정후 belrheas.css로 옮기기*/
+header {
+	width:100%;
+	height:60px;
+	margin:auto;
+	background-color:rgba(255,255,255,1);
+	position:fixed;
+	z-index:1000;
+	border-bottom:1px solid rgba(200,200,200,1);
+}
+.logo {
+	width:50px;
+	height:50px;
+	float:left;
+	position:absolute;
+	left:0px;
+	top:0px;
+	margin:10px 50px;
+	cursor:pointer;
+}
+.scroll-item > .scroll-sub-box {
+	width:100%;
+	height:550px;
+	top:32%;
+	transform:translateY(-50%);
+	position:relative; 
+	border: 2px black;
 }
 
 
-}
 
-/*
-* TEST 
-*/
+
+
+
+}

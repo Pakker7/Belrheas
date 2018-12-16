@@ -67,7 +67,11 @@ textarea::placeholder {font-family:'Nanum Gothic'}
 }
 
 /*
-* 반응형(모바일) 
+*  
+*
+* 반응형(모바일)
+*
+*
 */
 @media screen and (max-width: 768px) { 
 
@@ -146,6 +150,7 @@ header {
 	margin:10px 50px;
 	cursor:pointer;
 }
+/* 높낮이 조절 */
 .scroll-item > .scroll-sub-box {
 	width:100%;
 	height:550px;
@@ -154,7 +159,7 @@ header {
 	position:relative; 
 	border: 2px black;
 }
-
+/* 햄버거 메뉴 */
 
 
 

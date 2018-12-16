@@ -7,11 +7,7 @@ include_once './common/top_menu.php';
 	<div class="wrap-container order-container" id="scroll-container">
 		<div class="scroll-item">
 			<div class="scroll-sub-box">
-			</div>
-		</div>
-		<div class="scroll-item">
-			<div class="scroll-sub-box">
-<!--			<div class="scroll-sub-box content-div">	-->
+				<!--			<div class="scroll-sub-box content-div">	-->
 <!--				<div class="product-subject c_black">배송지 정보 입력</div>	-->
 				<span class="underline"></span>
 				<div class="address">
@@ -59,9 +55,9 @@ include_once './common/top_menu.php';
 						</table>
 					</form>
 				</div>
-
 			</div>
 		</div>
+
 </section>
 
 <section class="order-section">

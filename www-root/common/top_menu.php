@@ -10,5 +10,10 @@
 				<li>Yogurt Chocolate</li>
 				<li>Green Chocolate</li>
 			</ul>
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</nav>
 	</header>

@@ -7,34 +7,36 @@ include_once './common/top_menu.php';
 	<div class="wrap-container order-container" id="scroll-container">
 		<div class="scroll-item">
 			<div class="scroll-sub-box">
-				<!--			<div class="scroll-sub-box content-div">	-->
-<!--				<div class="product-subject c_black">배송지 정보 입력</div>	-->
+<!--			<div class="scroll-sub-box content-div">	-->
+				<div class="product-subject c_black">배송지 정보 입력</div>
 				<span class="underline"></span>
 				<div class="address">
 					<form method="post"> <!--action 유/무 결정해야 함 -->
 						<table class="addressList">
 							<tr>
 								<th></th>
-								<td id="userinfo"><input type="checkbox" name="">회원정보와 동일</td><!--현재 로그인한 회원 정보 불러오기 -->
+								<td id="userinfo"><input type="checkbox" class="checkbox">회원정보와 동일</td><!--현재 로그인한 회원 정보 불러오기 -->
 							</tr>
 							<tr>
-								<th>이 름</th>
+								<th class="property">이 름</th>
 								<td><input type="text" name="name"></td>
 							</tr>
 							<tr>
-								<th>우편 번호</th>
+								<th class="property">우편 번호</th>
 								<td><input type="text" id="sample6_postcode"><input type="button" onclick="sample6_execDaumPostcode()" value="주소검색"></td>
 							</tr>
 							<tr>	
-								<th>주 소</th>
+								<th class="property">주 소</th>
 								<td><input type="text" id="sample6_address"><input type="text" id="sample6_address2" placeholder="상세 주소"></td>
 							</tr>								
 							<tr>
-								<th>연락처</th>
-								<td><input type="text" class="small-input">-<input type="text" class="small-input">-<input type="text" class="small-input"></td>
+								<th class="property">연락처</th>
+								<td><input type="text" class="small-input" maxlength="3">
+									-<input type="text" class="small-input"maxlength="4">
+									-<input type="text" class="small-input"maxlength="4"></td>
 							</tr>
 							<tr>
-								<th>이메일</th>
+								<th class="property">이메일</th>
 								<td><input type="text" class="email"> @ <input type="text" name="str_email02" id="str_email02" style="width:100px;"> 
 									<select style="width:100px;margin-right:10px" name="selectEmail" id="selectEmail"> 
 										<option value="1">직접입력</option> 
@@ -49,22 +51,33 @@ include_once './common/top_menu.php';
 								</td>
 							</tr>
 							<tr>
-								<th>요청사항</th>
+								<th class="property">요청사항</th>
 								<td><textarea placeholder="ex.배송시 연락 주세요"></textarea> </td>
 							</tr>								
 						</table>
 					</form>
 				</div>
+
 			</div>
 		</div>
 
 </section>
+<!-- 원페이지
+		<div class="scroll-item">
+			<div class="scroll-sub-box">
+
+
+			</div>
+		</div>
+-->
+
 
 <section class="order-section">
 	<div class="order-tab">
 		<div class="clear-both"></div>
 		<button class="f_right btn-payment" type="submit">다음</button>
-		<button class="f_right btn-basket" onclick="scrollUp()">이전</button>
+		<button class="f_right btn-payment" type="submit">추가</button>
+		<button class="f_right btn-basket">이전</button>
 		<div class="clear-both"></div>
 	</div>
 	<div class="info-order"></div>
@@ -89,6 +102,32 @@ include_once './common/top_menu.php';
 			$("#str_email02").attr("disabled",true); //비활성화 
 		} 
 	}); 
+});
+	//휴대폰 번호 input
+	$(function() {
+    $(".small-input").keydown(function(e) {
+		var charLimit = $(this).attr("maxlength");
+        var keys = [8, 9, /*16, 17, 18,*/ 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 144, 145];
+
+        if (e.which == 8 && this.value.length == 0) {
+            $(this).prev('.small-input').focus();
+        } else if ($.inArray(e.which, keys) >= 0) {
+            return true;
+        } else if (this.value.length >= charLimit) {
+            $(this).next('.small-input').focus();
+            return false;
+        } else if (e.shiftKey || e.which <= 47 || e.which >= 106) {
+            return false;
+        } else if (e.shiftKey || (e.which >= 58 && e.which <= 95)) {
+            return false;
+        }
+    }).keyup (function () {
+		var charLimit = $(this).attr("maxlength");
+        if (this.value.length >= charLimit) {
+            $(this).next('.small-input').focus();
+            return false;
+        }
+    });
 });
 	//다음 지도 팝업
     function sample6_execDaumPostcode() {

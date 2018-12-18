@@ -13,28 +13,31 @@ textarea::placeholder {font-family:'Nanum Gothic'}
 	border-collapse: separate;
  	border-spacing: 15px;
  }
-.addressList th{
+.addressList .property{
 	width: 30%;
 	margin-bottom: 10px;
 	text-align: center;
+	background-color: rgba(141,111,75,0.5);
+	border-radius: 5px;
+	color:white;
 }
 .addressList td{
 	margin-bottom: 10px;
 }
 
-.addressList td input[type="text"], .addressList td textarea {
+.addressList td input[type="text"], .addressList td textarea, #selectEmail {
 	border: 1px solid #e4e4e4;
 	padding-left: 10px;
 }
 .addressList td input[type="button"] {
 	border:0px;
-	background-color: rgba(141,111,75,0.5);
-	color:white;
+	background-color: rgba(141,111,75,0.3);
 	border-radius: 5px;
+	color: white;
 	width: 20%;
 	height: 50px;
 }
-.addressList input[type="text"]{
+.addressList input[type="text"],#selectEmail{
 	width: 40%;
 	height: 50px;
 }
@@ -66,6 +69,29 @@ textarea::placeholder {font-family:'Nanum Gothic'}
 	position: absolute;top: 50%; transform: translateY(--50%);
 }
 
+/* 메뉴바 : 완성후  Belrheas.css로 옮겨야 할듯함*/
+.background-menubar{
+	background-color: black;
+	opacity: 0.5;
+	text-align: center;
+	float: right;
+	height: 700px;
+}
+.background-menu{
+	color: white;
+	z-index: 50;
+	margin: 20px;
+}
+.menu a{
+	cursor:pointer;
+}
+.menu .hide{
+	display:none;
+}
+.category{
+	font-size: large;
+}
+
 /*
 *  
 *
@@ -87,7 +113,7 @@ textarea::placeholder {font-family:'Nanum Gothic'}
 	margin-bottom: 10px;
 }
 
-.addressList td input[type="text"], .addressList td textarea {
+.addressList td input[type="text"], .addressList td textarea,#selectEmail {
 	border: 1px solid #e4e4e4;
 	padding-left: 10px;
 }
@@ -102,7 +128,7 @@ textarea::placeholder {font-family:'Nanum Gothic'}
 .addressList #sample6_postcode,.addressList .email{
 	width: 30%;
 }
-.addressList input[type="text"]{
+.addressList input[type="text"],#selectEmail{
 	width: 90%;
 	height: 35px;
 }
@@ -161,8 +187,10 @@ header {
 }
 /* 햄버거 메뉴 */
 
-
-
+/* 배송지 정보 입력*/
+.product-subject {
+	display: none;
+}
 
 
 }

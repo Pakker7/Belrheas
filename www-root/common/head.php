@@ -9,6 +9,7 @@
   	<link rel="stylesheet" href="./common/css/animate.css">
   	<link rel="stylesheet" href="./common/css/purchase.css">
   	<link rel="stylesheet" href="./common/css/address.css">
+  	<link rel="stylesheet" href="./common/css/join.css">
 </head>
 
 <?php

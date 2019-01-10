@@ -47,10 +47,17 @@ textarea::placeholder {font-family:'Nanum Gothic'}
 }
 
 .addressList input.small-input {
-	width:25%;
+	width:calc(33.3333% - 10px);
 	height:50px;
-	border:1px solid #e3e3e3;
+	float:left;
 	padding-left:10px;
+	border:1px solid #e3e3e3;
+}
+
+.addressList .phone span {
+	width:10px;
+	height:50px;
+	float: left;
 }
 
 #userinfo{

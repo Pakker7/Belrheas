@@ -11,7 +11,7 @@ include_once './common/top_menu.php';
 				<div class="product-subject c_black">배송지 정보 입력</div>
 				<span class="underline"></span>
 				<div class="address">
-					<form method="post"> <!--action 유/무 결정해야 함 -->
+					<form method="post" action="./insert.php"> <!--action 유/무 결정해야 함 -->
 						<table class="addressList">
 							<tr>
 								<th></th>
@@ -23,21 +23,21 @@ include_once './common/top_menu.php';
 							</tr>
 							<tr>
 								<th class="property">우편 번호</th>
-								<td><input type="text" id="sample6_postcode"><input type="button" onclick="sample6_execDaumPostcode()" value="주소검색"></td>
+								<td><input type="text" id="sample6_postcode" name="postcode"><input type="button" onclick="sample6_execDaumPostcode()" value="주소검색"></td>
 							</tr>
 							<tr>	
 								<th class="property">주 소</th>
-								<td><input type="text" id="sample6_address"><input type="text" id="sample6_address2" placeholder="상세 주소"></td>
-							</tr>								
+								<td><input type="text" id="sample6_address" name="address"><input type="text" id="sample6_address2" placeholder="상세 주소" name="address_detail"></td>
+							</tr>
 							<tr>
 								<th class="property">연락처</th>
-								<td><input type="text" class="small-input" maxlength="3">
-									-<input type="text" class="small-input"maxlength="4">
-									-<input type="text" class="small-input"maxlength="4"></td>
+								<td class="phone"><input type="text" class="small-input" maxlength="3" name="phone1">
+									<span>-</span><input type="text" class="small-input"maxlength="4" name="phone2">
+									<span>-</span><input type="text" class="small-input"maxlength="4" name="phone3"></td>
 							</tr>
 							<tr>
 								<th class="property">이메일</th>
-								<td><input type="text" class="email"> @ <input type="text" name="str_email02" id="str_email02" style="width:100px;"> 
+								<td><input type="text" class="email" name=email1> @ <input type="text" name="email2" id="str_email02" style="width:100px;"> 
 									<select style="width:100px;margin-right:10px" name="selectEmail" id="selectEmail"> 
 										<option value="1">직접입력</option> 
 										<option value="naver.com" selected>naver.com</option>
@@ -52,7 +52,7 @@ include_once './common/top_menu.php';
 							</tr>
 							<tr>
 								<th class="property">요청사항</th>
-								<td><textarea placeholder="ex.배송시 연락 주세요"></textarea> </td>
+								<td><textarea name="request" placeholder="ex.배송시 연락 주세요"></textarea> </td>
 							</tr>								
 						</table>
 					</form>

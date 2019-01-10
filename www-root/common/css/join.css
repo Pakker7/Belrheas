@@ -1,0 +1,10 @@
+
+
+.join-table { position: relative; width: 100%; height: 100%; margin: auto; }
+.join-input { position: relative; width: 40%; height: 60px; margin: auto; padding: 10px; }
+
+.join-table .join-text-input { border: 1px solid #e4e4e4; padding-left: 10px; height: 100%; width:100%; border-radius: 5px;}
+.join-table #sample6_postcode { float:left; width: 50%; border-radius: 5px;}
+.join-table input[type="button"] { border:0px; background-color: rgba(141,111,75,0.3); border-radius: 5px; color: white; width: 20%; height: 100%; }
+
+.join-table .join-phone-input { width:calc(33.3333% - 9.5px);  border: 1px solid #e4e4e4;height: 100%; border-radius: 5px;}

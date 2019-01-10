@@ -6,19 +6,15 @@ include_once './common/top_menu.php';
 <section class="purchase-wrap">
 	<div class="purchase-container">
 		<div class="parents">
-		<div class="purleft"></div>										<!-- 좌측 영역 -->
+		<div class="purleft"></div>
 		<div class="purright">
-								<!-- 우측 영역 -->
-			<div class="purchase">상품명<span class="spam">Milk Chocolate</span></div>
-			
-			<div class="purchase">개수<span class="spam">2개</span></div>
-			
-			<div class="purchase">가격<span class="spam">24,000원</span></div>
-			
-			<div class="purchase">배송비<span class="spam">2,500원</span></div>
+			<div class="purchase"><span class="spam">상품명</span>Milk Chocolate</div>
+			<div class="purchase"><span class="spam">개수</span>2개</div>
+			<div class="purchase"><span class="spam">가격</span>24,000원</div>
+			<div class="purchase"><span class="spam">배송비</span>2,500원</div>
 		</div>
 		</div>
-		<div class="purdown">총 결제금액</div> <span class="spam">26,500원</span>
+		<div class="purdown"><span class="spamdown">총 결제금액</span>26,500원</div>
 	</div>
 </section>
 

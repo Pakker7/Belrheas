@@ -10,6 +10,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="two-step">
 			<div class="two-image-cover"></div>
 			<div class="two-image">

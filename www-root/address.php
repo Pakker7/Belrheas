@@ -11,7 +11,7 @@ include_once './common/top_menu.php';
 				<div class="product-subject c_black">배송지 정보 입력</div>
 				<span class="underline"></span>
 				<div class="address">
-					<form method="post" action="./insert.php"> <!--action 유/무 결정해야 함 -->
+					<form method="post" action="./d_insert.php"> <!--action 유/무 결정해야 함 -->
 						<table class="addressList">
 							<tr>
 								<th></th>

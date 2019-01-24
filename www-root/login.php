@@ -7,22 +7,15 @@ include_once './common/top_menu.php';
    <div class="wrap-container order-container" id="scroll-container">
       <div class="scroll-item">
          <div class="scroll-sub-box">
-            <div class="product-subject c_black">회원 가입</div>
-            <form name="join_form" method="post" action="./j_insert.php">
-            <div class="join-table">
-               <div class="join-input">
+            <div class="product-subject c_black">로그인</div>
+            <form name="login_form" method="post" action="./j_insert.php">
+            <div class="login-table">
+               <div class="login-input">
                     <input class="join-text-input" type="text" name="email" placeholder="이메일" >
                     <div class="check-id" id="check-id"></div>
                </div>
-               <div class="join-input">
+               <div class="login-input">
                     <input class="join-text-input" type="password" name="pw" placeholder="비밀번호" >
-               </div>
-               <div class="join-input">
-                    <input class="join-text-input" type="password" name="checkPw" placeholder="비밀번호확인" >
-                    <p id="pwnotsame" style="color: red"></p>
-               </div>
-               <div class="join-input">
-                    <input class="join-text-input" type="text" name="name" placeholder="이름" >
                </div>
             </div>
             </form>
@@ -32,7 +25,7 @@ include_once './common/top_menu.php';
 <section class="order-section">
     <div class="order-tab">
         <div class="clear-both"></div>
-        <button class="f_right btn-payment" onclick="checkSubmit();">회원가입</button>
+        <button class="f_right btn-payment" onclick="checkSubmit();">로그인</button>
         <div class="clear-both"></div>
     </div>
     <div class="info-order"></div>
@@ -42,18 +35,6 @@ include_once './common/top_menu.php';
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
-
-
-  // 패스워드 확인
-  function tocheckpw(){
-    var pw = document.getElementById("pw").value;
-    var checkPw= document.getElementById("checkPw").value;
-
-    if(pw != checkPw) {
-      document.getElementById('pwnotsame').innerHTML="비밀번호가 틀렸습니다. 다시 입력해 주세요";
-      return false;
-    }
-  }
 
   // 유효성 검사
   function checkSubmit () {

@@ -1,51 +1,56 @@
 <?php
-
 include_once './common/dbconfig/dbconfig.php';
-/*
-$query = "INSERT INTO `member` SET `m_id` = ?,
-									`m_pw` = ?,
-									`m_name` = ?,
-									`m_nickname` = ?,
-									`phone_num` = ?,
-									`access_date` = ?,
-									`join_date` = ?";
-*/
+
 
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
-/*
-for ($i=0;$i<30;$i++) {
+ini_set('display_errors',1);
 
-	$m_id[$i] = "haribo".$i."@naver.com";
-	$m_pw[$i] = "haribo123";
-	$m_name[$i] = "고구마".$i;
-	$m_nickname[$i] = "하리보".$i;
+$i_group_num=1;
+$name=$_POST['name']; //purchase
+$postcode=$_POST['postcode'];
+$address=$_POST['address'];
+$address_detail=$_POST['address_detail'];
+$phone1=$_POST['phone1'];
+$phone2=$_POST['phone2'];
+$phone3=$_POST['phone3'];
+$phone=$phone1.$phone2.$phone3;
+$email1=$_POST['email1'];
+$email2=$_POST['email2'];
+$email=$email1.'@'.$email2;
+$request=$_POST['request'];
 
-	$phone_num = "010-0000-0000";
-	$access_date = date("Y-m-d H:i:s");
-	$join_date = date("Y-m-d H:i:s");
+$query = "INSERT INTO `address` (`i_group_num`, `post_num`,`add`,`add_detail`) VALUES (?, ?, ?, ?)";
 
-	$query = "INSERT INTO `member` (`m_id`, `m_pw`, `m_name`, `m_nickname`, `phone_num`, `access_date`, `join_date`) VALUES (?, PASSWORD(?), ?, ?, ?, ?, ?)";
 
-	$result = $con->prepare($query);
+$result=$con->prepare($query);
 
-	//$result->bindParam()
+$m_array=array();
 
-	$hash_m_pw = hash('sha512', $m_pw[$i]);
-	$m_array = array();
+$m_array[]=$i_group_num;
+$m_array[]=$postcode;
+$m_array[]=$address;
+$m_array[]=$address_detail;
 
-	$m_array[] = $m_id[$i];
-	$m_array[] = $hash_m_pw;
-	$m_array[] = $m_name[$i];
-	$m_array[] = $m_nickname[$i];
-	$m_array[] = $phone_num;
-	$m_array[] = $access_date;
-	$m_array[] = $join_date;
 
-	$result->execute($m_array);
+
+$result->execute($m_array);
+
+$query = "INSERT INTO `purchase` (`i_group_num`,`phone_num`,`email`,`request`) VALUES (?, ?, ?, ?)";
+
+
+$result=$con->prepare($query);
+
+$p_array=array();
+
+$p_array[]=$i_group_num;
+$p_array[]=$phone;
+$p_array[]=$email;
+$p_array[]=$request;
+
+
+$result->execute($p_array);
+
+if ($result) {
+    echo "등록 성공";
 }
-*/
-
-//$result->execute(array($m_id, $hash_m_pw, $m_name, $m_nickname, $phone_num, $access_date, $join_date));
-
 ?>

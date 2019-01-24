@@ -3,6 +3,7 @@ include_once './common/head.php';
 include_once './common/top_menu.php';
 ?>
 
+
 <section class="purchase-wrap">
 	<div class="purchase-container">
 		<div class="parents">
